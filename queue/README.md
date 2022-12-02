@@ -13,5 +13,6 @@ Output
 
 <img src="https://raw.githubusercontent.com/HeimanPictures/c-program/main/queue/queue1-ouput.jpeg"/>
 
-**[Full Code](https://github.com/HeimanPictures/c-program/blob/main/queue/queue.c)**
+**[1st Full Code](https://github.com/HeimanPictures/c-program/blob/main/queue/queue.c)**
+**[2st Full Code](https://github.com/HeimanPictures/c-program/blob/main/queue/queue2.c)**
 
