@@ -8,12 +8,19 @@
     - Group 3: Between 20 & 29
     - Group 4: 30 & greater
 
+## Solution
 
-Output
-
-<img src="https://raw.githubusercontent.com/HeimanPictures/c-program/main/queue/queue1-ouput.jpeg"/>
-
-- Code 
+### 1st
+- Code 1
     - **[1st Full Code](https://github.com/HeimanPictures/c-program/blob/main/queue/queue.c)**
+        
+- Output
+    <img src="https://raw.githubusercontent.com/HeimanPictures/c-program/main/queue/queue1-ouput.jpeg"/>
+
+### 2nd 
+- Code 2
     - **[2st Full Code](https://github.com/HeimanPictures/c-program/blob/main/queue/queue2.c)**
+        
+- Output
+    <img src="https://raw.githubusercontent.com/HeimanPictures/c-program/main/queue/queue2-output.jpeg"/>
 
