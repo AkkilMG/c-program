@@ -175,12 +175,12 @@ void main() {
     insertionSort(1,qu1);
     display(2,q1);
     display(1,q2);
-    insertionSort(2,qu1);
+    insertionSort(2,qu2);
     display(2,q2);
     display(1,q3);
-    insertionSort(3,qu1);
+    insertionSort(3,qu3);
     display(2,q3);
     display(1,q4);
-    insertionSort(4,qu1);
+    insertionSort(4,qu4);
     display(2,q4);
 }
