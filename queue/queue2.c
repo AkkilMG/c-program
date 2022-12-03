@@ -76,12 +76,16 @@ int delete(int m) {
     }
 }
 
-void display(queue q) {
+void display(int m, queue q) {
     int i;
     if(q.rear<q.front) {
         printf("Queue is empty.");
     } else {
-        printf("Contents of queue are ");
+        if(m==1) {
+            printf("Contents of queue before sorting are ");
+        } else {
+            printf("Contents of queue after sorting are ");
+        }
         for(i=q.front; i<=q.rear; i++) {
             printf("%d ", q.item[i]);
         }
@@ -94,7 +98,7 @@ void insertionSort(int m, int n)
 { 
     int i, element, j; 
     if(m==1) {
-        for (i = 1; i < n; i++) { 
+        for (i = 1; q1.item[i]!='\0'; i++) { 
             element = q1.item[i]; 
             j = i - 1; 
             while (j >= 0 && q1.item[j] > element) { 
@@ -104,7 +108,7 @@ void insertionSort(int m, int n)
             q1.item[j + 1] = element; 
         } 
     } else if(m==2) {
-        for (i = 1; i < n; i++) { 
+        for (i = 1; q2.item[i]!='\0'; i++) { 
             element = q2.item[i]; 
             j = i - 1; 
             while (j >= 0 && q2.item[j] > element) { 
@@ -114,7 +118,7 @@ void insertionSort(int m, int n)
             q2.item[j + 1] = element; 
         } 
     } else if(m==3) {
-        for (i = 1; i < n; i++) { 
+        for (i = 1; q3.item[i]!='\0'; i++) { 
             element = q3.item[i]; 
             j = i - 1; 
             while (j >= 0 && q3.item[j] > element) { 
@@ -124,7 +128,7 @@ void insertionSort(int m, int n)
             q3.item[j + 1] = element; 
         } 
     } else {
-        for (i = 1; i < n; i++) { 
+        for (i = 1; q4.item[i]!='\0'; i++) { 
             element = q4.item[i]; 
             j = i - 1; 
             while (j >= 0 && q4.item[j] > element) { 
@@ -139,7 +143,7 @@ void insertionSort(int m, int n)
 void insertionSort(int, int);
 
 void insert(int, int);
-void display(queue);
+void display(int, queue);
 
 void main() {
     
@@ -167,12 +171,16 @@ void main() {
             qu4++;
         }
     }
-    insertionSort(q1.item,qu1);
-    insertionSort(q2.item,qu1);
-    insertionSort(q3.item,qu1);
-    insertionSort(q4.item,qu1);
-    display(q1);
-    display(q2);
-    display(q3);
-    display(q4);
+    display(1,q1);
+    insertionSort(1,qu1);
+    display(2,q1);
+    display(1,q2);
+    insertionSort(2,qu1);
+    display(2,q2);
+    display(1,q3);
+    insertionSort(3,qu1);
+    display(2,q3);
+    display(1,q4);
+    insertionSort(4,qu1);
+    display(2,q4);
 }
