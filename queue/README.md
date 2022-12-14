@@ -10,6 +10,15 @@
 
 ## Solution
 
+
+### Main
+
+- Code
+    - **[Full Code](https://github.com/HeimanPictures/c-program/blob/main/queue/main.c)**
+        
+- Output
+    <img src="https://raw.githubusercontent.com/HeimanPictures/c-program/main/queue/main%20ouput.jpeg"/>
+
 ### 1st
 - Code 1
     - **[1st Full Code](https://github.com/HeimanPictures/c-program/blob/main/queue/queue.c)**
