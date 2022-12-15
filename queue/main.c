@@ -19,7 +19,7 @@ typedef struct {
 } queue;
 
 queue q1, q2, q3, q4;
-int a[10];
+int a[10], no=0, no2=0;
 
 // Insert
 void insert(queue *q, int n) {
@@ -44,7 +44,8 @@ void display(queue *q) {
     if(q->rear<q->front) {
         printf("Queue is empty.");
     } else {
-        printf("Contents of queue are ");
+        no++;
+        printf("Group %d: Contents of queue%d are ", );
         for(i=q->front; i<=q->rear; i++) {
             printf("%d ", q->item[i]);
         }
@@ -54,7 +55,8 @@ void display(queue *q) {
 
 // Display the temp array
 void displayQ(int a[]) {
-    printf("Contents of sorted array are ");
+    no2++;
+    printf("Group %d: Contents of sorted array are ", no2);
     for(int i=0; a[i]!='\0';i++) {
         printf("%d ", a[i]);
         a[i]='\0';
@@ -84,10 +86,12 @@ void insertionSort();
 
 // does most of the work
 void delete_sort(queue *q) {
+    printf("Categorised data into different group:\n");
     display(q);
     for(int i=0;q->item[i]!='\0';i++) {
         a[i]=delete(q);
     }
+    printf("\n");
     insertionSort(a);
     displayQ(a);
 }
@@ -101,7 +105,7 @@ void main() {
 
     int i, a[10];
     // input
-    printf("Enter the elements(count of 10): ");
+    printf("Enter the data/elements(count of 10): ");
     for(i=0;i<10;i++) {
         scanf("%d",&a[i]);
     }
