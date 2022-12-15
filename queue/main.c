@@ -45,7 +45,7 @@ void display(queue *q) {
         printf("Queue is empty.");
     } else {
         no++;
-        printf("Group %d: Contents of queue%d are ", no);
+        printf("Group %d: Contents of queue%d are ", no,no);
         for(i=q->front; i<=q->rear; i++) {
             printf("%d ", q->item[i]);
         }
