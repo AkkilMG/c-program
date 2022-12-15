@@ -19,7 +19,7 @@ typedef struct {
 } queue;
 
 queue q1, q2, q3, q4;
-int qu[10];
+int a[10];
 
 // Insert
 void insert(queue *q, int n) {
@@ -44,7 +44,7 @@ void display(queue *q) {
     if(q->rear<q->front) {
         printf("Queue is empty.");
     } else {
-        printf("Contents of queue before sorting are ");
+        printf("Contents of queue are ");
         for(i=q->front; i<=q->rear; i++) {
             printf("%d ", q->item[i]);
         }
@@ -53,11 +53,11 @@ void display(queue *q) {
 }
 
 // Display the temp array
-void displayQ(int qu[]) {
-    printf("Contents of queue after sorting are ");
-    for(int i=0; qu[i]!='\0';i++) {
-        printf("%d ", qu[i]);
-        qu[i]='\0';
+void displayQ(int a[]) {
+    printf("Contents of sorted array are ");
+    for(int i=0; a[i]!='\0';i++) {
+        printf("%d ", a[i]);
+        a[i]='\0';
     }
     printf("\n");
 }
@@ -65,14 +65,14 @@ void displayQ(int qu[]) {
 // Insertion Sort Function
 void insertionSort()
 { 
-    for (int i = 1; qu[i]!='\0'; i++) { 
-        int element = qu[i]; 
+    for (int i = 1; a[i]!='\0'; i++) { 
+        int element = a[i]; 
         int j = i - 1; 
-        while (j >= 0 && qu[j] > element) { 
-            qu[j + 1] = qu[j]; 
+        while (j >= 0 && a[j] > element) { 
+            a[j + 1] = a[j]; 
             j = j - 1; 
         } 
-        qu[j + 1] = element; 
+        a[j + 1] = element; 
     } 
 }
 
@@ -83,16 +83,16 @@ int delete(queue*);
 void insertionSort();
 
 // does most of the work
-void helper(queue *q) {
+void delete_sort(queue *q) {
     display(q);
     for(int i=0;q->item[i]!='\0';i++) {
-        qu[i]=delete(q);
+        a[i]=delete(q);
     }
-    insertionSort(qu);
-    displayQ(qu);
+    insertionSort(a);
+    displayQ(a);
 }
 
-void helper(queue*);
+void delete_sort(queue*);
 
 void main() {
     
@@ -119,8 +119,8 @@ void main() {
     }
 
     // Calling
-    helper(&q1);
-    helper(&q2);
-    helper(&q3);
-    helper(&q4);
+    delete_sort(&q1);
+    delete_sort(&q2);
+    delete_sort(&q3);
+    delete_sort(&q4);
 }
