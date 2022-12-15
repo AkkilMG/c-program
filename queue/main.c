@@ -86,12 +86,10 @@ void insertionSort();
 
 // does most of the work
 void delete_sort(queue *q) {
-    printf("Categorised data into different group:\n");
-    display(q);
     for(int i=0;q->item[i]!='\0';i++) {
         a[i]=delete(q);
     }
-    printf("\n");
+    
     insertionSort(a);
     displayQ(a);
 }
@@ -123,6 +121,12 @@ void main() {
     }
 
     // Calling
+    printf("Categorised data into different group:\n");
+    display(&q1);
+    display(&q2);
+    display(&q3);
+    display(&q4);
+    printf("\nSorted data:\n");
     delete_sort(&q1);
     delete_sort(&q2);
     delete_sort(&q3);
