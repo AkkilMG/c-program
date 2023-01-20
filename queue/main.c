@@ -90,7 +90,7 @@ void delete_sort(queue *q) {
         a[i]=delete(q);
     }
     
-    insertionSort(a);
+    insertionSort();
     displayQ(a);
 }
 
